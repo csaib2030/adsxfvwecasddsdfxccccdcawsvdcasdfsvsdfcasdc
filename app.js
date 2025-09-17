@@ -90,7 +90,7 @@ function toggleWrap(wrap, active){
 }
 
 let target = 1;
-let reverse = false;
+let reverse = true;
 let isScrollingPaused = false;
 
 document.addEventListener('click', () => reverse = !reverse)
