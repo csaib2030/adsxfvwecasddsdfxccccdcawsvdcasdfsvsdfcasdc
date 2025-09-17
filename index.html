@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Cube Login Form</title>
+  <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+
+<form autocomplete='off' class='form' onsubmit="return false;"> <div class='control'>
+    <h1>
+      I Love You Shreya, you shall be let in if you know yourself enough
+    </h1>
+  </div>
+  <div class='control block-cube block-input'>
+    <input name='fastfood' id='fastfood' placeholder='Your Favourite Fast Food' type='text'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+  </div>
+  <div class='control block-cube block-input'>
+    <input name='phonepassword' id='phonepassword' placeholder='Phone Password' type='text'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+  </div>
+  <div class='control block-cube block-input'>
+    <input name='favouritepart' id="favouritepart" placeholder='Fav Body Part; after dick' type='text'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+  </div>
+  <button class='btn block-cube block-cube-hover' type='button' onclick="validateAndRedirect()">
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='text'>
+      Log In
+    </div>
+  </button>
+  <div class='credits'>
+    <a href='https://codepen.io/marko-zub/' target='_blank'>
+      My other codepens
+    </a>
+  </div>
+</form>
+
+<script>
+  function validateAndRedirect() {
+    // This script will now work because the IDs exist
+    const username = document.getElementById('fastfood').value;
+    const password = document.getElementById('phonepassword').value;
+    const favouritepart = document.getElementById('favouritepart').value;
+
+    if (username.toLowerCase() === "subway" && password === "140999" && favouritepart === "nose") { // Added .toLowerCase() for flexibility
+        // Note: Make sure an "index.html" file exists in the same folder.
+        window.location.href = "main.html"; 
+    } else {
+        alert("Incorrect username or password.");
+    }
+}
+</script>
+  
+</body>
+</html>

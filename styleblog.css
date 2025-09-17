@@ -1,0 +1,78 @@
+/* --- Global & Background Styles --- */
+@font-face {
+  font-family: "ivar";
+  src: url(./IvarDisplayCondensed-Light.woff2) format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url('background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overscroll-behavior: none;
+  /* Centering the single text box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Initial Overlay --- */
+#page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-out;
+}
+
+#start-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+}
+
+/* --- Static Text Box --- */
+.static-text-box {
+  max-width: 1200px;
+  padding: 40px;
+  background-color: rgba(232, 232, 225, 0.8); /* Aesthetic match from your site */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.static-text-box p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #191919;
+  text-align: center;
+}
